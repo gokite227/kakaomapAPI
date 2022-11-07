@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>좌표로 주소를 얻어내기</title>
+    <title>pit-a-pet</title>
+    
     <link rel="stylesheet" type="text/css" href="./style.css">
     <style>
     .title {font-weight:bold;display:block;}
@@ -51,18 +52,18 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav" style="background-Color:#d3cbb4" >
     <div class="container px-5">
-        <a class="navbar-brand fw-bold" href="#page-top">Pit a Pet</a>
+        <a class="navbar-brand fw-bold" href="https://gokite227.github.io/pitapet/#/">Pit a Pet</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                <li class="nav-item nav-link me-lg-3">Home</li>
-                <li class="nav-item nav-link me-lg-3">Borad</li>
-                <li class="nav-item nav-link me-lg-3">Calendar</li>
-                <li class="nav-item nav-link me-lg-3">Map</li>
-                <li class="nav-item nav-link me-lg-3">profile</li>
+                <a href="https://gokite227.github.io/pitapet/#/"class="nav-item nav-link me-lg-3">Home</a>
+                <a href="https://gokite227.github.io/pitapet/#/Borad/"class="nav-item nav-link me-lg-3">Borad</a>
+                <a href="https://gokite227.github.io/pitapet/#/CalendarApp/" class="nav-item nav-link me-lg-3">Calendar</a>
+                <a href="https://gokite227.github.io/kakaomapAPI/" class="nav-item nav-link me-lg-3">Map</a>
+                <a href="https://gokite227.github.io/pitapet/#/profile/" class="nav-item nav-link me-lg-3">profile</a>
             </ul>
         </div>
     </div>
@@ -70,7 +71,7 @@
       </div>
       <div style="padding:73px 0px 0px 0px">
         <div class="map_wrap">
-            <div id="map" style="width:100%;height:900px;position:relative;overflow:hidden;"></div>
+            <div id="map" style="width:100vw;height:100vh;position:relative;overflow:hidden;"></div>
             <div id="menu_wrap" class="bg_white">
                 <hr>
                 <ul id="placesList"></ul>
@@ -106,7 +107,7 @@
               lon = position.coords.longitude; // 경도
           
           var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-              message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
+              message = '<div style="padding:5px;">현위치</div>'; // 인포윈도우에 표시될 내용입니다
 
               ps.keywordSearch('동물병원', placesSearchCB, {
                 location: new kakao.maps.LatLng(lat, lon)
